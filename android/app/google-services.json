@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "960195864250",
+    "project_id": "fir-example-ef29a",
+    "storage_bucket": "fir-example-ef29a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960195864250:android:136cf2a6b1b76b5158c483",
+        "android_client_info": {
+          "package_name": "com.ulmo.e_commerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960195864250-tshgugcctbpcie8aol66jpk2u0kvmvcn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6OSGZFVSUyKm2gjS2ishnfi7Wt2NCQy8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960195864250-tshgugcctbpcie8aol66jpk2u0kvmvcn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

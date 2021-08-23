@@ -43,7 +43,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
         iconTheme: IconThemeData(color: Colors.black),
         centerTitle: true,
         title: AppText(
-           'Change Password',
+           'Change Password'.tr,
           color: Colors.black,
           fontSize: 20,
         ),
@@ -53,7 +53,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
         children: [
           SizedBox(height: 70),
           AppText(
-            'Please enter your phone Number and we will  send you a code to your phone  to rest the password',
+            'Please enter your phone number and we will send you a code to your phone to reset the password'.tr,
             color: Colors.grey,
 
             fontSize: 15,
@@ -63,26 +63,26 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
           AppTextField(
 
             controller: _oldPasswordEditingController,
-            hintText: 'Old Password',
+            hintText: 'Old Password'.tr,
             isPassword: true,
           ),
           SizedBox(height: 15),
           AppTextField(
             controller: _newPasswordEditingController,
-            hintText: 'New Password',
+            hintText: 'New Password'.tr,
             isPassword: true,
           ),
           SizedBox(height: 15),
           AppTextField(
             controller: _newPasswordConfirmationEditingController,
-            hintText: 'New password Confirmation',
+            hintText: 'New password Confirmation'.tr,
             isPassword: true,
           ),
           SizedBox(
             height: 43,
           ),
           AppElevatedButton(
-            title: 'Continue',
+            title: 'Continue'.tr,
             color: AppColors.app_button_color,
 
             onPressed: () async => await performChangePassword(),
@@ -104,9 +104,9 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
         return true;
       }
       Helper.showSnackBar(context,
-          text: 'Password is not confirmed correctly!', error: true);
+          text: 'Password is not confirmed correctly!'.tr, error: true);
     } else {
-      Helper.showSnackBar(context, text: 'Enter required data!', error: true);
+      Helper.showSnackBar(context, text: 'Enter required data!'.tr, error: true);
     }
     return false;
   }

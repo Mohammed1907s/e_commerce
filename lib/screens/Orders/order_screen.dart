@@ -35,7 +35,7 @@ class _OrderScreenState extends State<OrderScreen> {
         elevation: 0,
         centerTitle: true,
         title: AppText(
-          'Make Order',
+          'Make Order'.tr,
           color:Colors.black,
           fontSize: 20,
         ),
@@ -131,7 +131,7 @@ class _OrderScreenState extends State<OrderScreen> {
                     });
                   },
                   title: AppText(
-                     'Online',
+                     'Online'.tr,
                     fontSize: 16,
                     color: Colors.black,
                   ),
@@ -149,7 +149,7 @@ class _OrderScreenState extends State<OrderScreen> {
                     });
                   },
                   title: AppText(
-                   'Offline',
+                   'Offline'.tr,
                     fontSize: 16,
                     color: Colors.black,
                   ),
@@ -159,7 +159,7 @@ class _OrderScreenState extends State<OrderScreen> {
           ),
           SizedBox(height: 42),
           AppElevatedButton(
-            title: 'Confirm Order',
+            title: 'Confirm Order'.tr,
             color: AppColors.app_button_color,
             onPressed: () async => await performOrder(),
           ),

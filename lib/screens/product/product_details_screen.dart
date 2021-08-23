@@ -4,6 +4,7 @@ import 'package:e_commerce/extenssions/app_colors_extenssion.dart';
 import 'package:e_commerce/getx/address_getx_controller.dart';
 import 'package:e_commerce/getx/cart_getx_controller.dart';
 import 'package:e_commerce/getx/product_getx_controller.dart';
+import 'package:e_commerce/local_storge/shared_preferences/preferences.dart';
 import 'package:e_commerce/models/cart_item.dart';
 import 'package:e_commerce/models/product_details.dart';
 import 'package:e_commerce/utils/helper.dart';
@@ -98,7 +99,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               AppText(
-                                ProductGetxController
+                                SharedPreferencesController().languageCode == 'ar' ? ProductGetxController
+                                    .to.productDetails.value!.nameAr: ProductGetxController
                                     .to.productDetails.value!.nameEn,
                                 color: Colors.black,
                                 fontSize: SizeConfig.scaleTextFont(20),
@@ -132,7 +134,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                         ],
                                       )
                                       : AppText(
-                                          'Price : ${ProductGetxController.to.productDetails.value!.price} ₪',
+                                          'Price : ${ProductGetxController.to.productDetails.value!.price} ₪'.tr,
                                           color: Colors.black,
                                           fontSize: 21,
                                           fontWeight: FontWeight.w600,
@@ -174,7 +176,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                 height: 8,
                               ),
                               AppText(
-                                ProductGetxController
+                                SharedPreferencesController().languageCode == 'ar' ? ProductGetxController
+                                    .to.productDetails.value!.infoAr: ProductGetxController
                                     .to.productDetails.value!.infoEn,
                                 color: Colors.grey,
                                 fontSize: 16,
@@ -217,7 +220,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                   }
                                   Get.back();
                                 },
-                                title: 'Add to cart',
+                                title: 'Add to cart'.tr,
                                 color: AppColors.app_button_color,
                               ),
                             ],

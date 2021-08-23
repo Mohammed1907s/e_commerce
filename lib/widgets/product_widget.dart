@@ -1,4 +1,5 @@
 import 'package:e_commerce/extenssions/app_colors_extenssion.dart';
+import 'package:e_commerce/local_storge/shared_preferences/preferences.dart';
 import 'package:e_commerce/models/product_details.dart';
 import 'package:e_commerce/utils/size_config.dart';
 import 'package:e_commerce/widgets/app_text.dart';
@@ -66,7 +67,7 @@ class ProductWidget extends StatelessWidget {
                           Flexible(
                             child: Container(
                               padding: EdgeInsets.only(right: 13.0),
-                              child: Text(product.nameEn,
+                              child: Text( SharedPreferencesController().languageCode == 'ar' ? product.nameAr: product.nameEn,
                                   overflow: TextOverflow.ellipsis,
                                   softWrap: false,
                                   maxLines: 1,

@@ -1,4 +1,5 @@
 import 'package:e_commerce/getx/categories_getx_controller.dart';
+import 'package:e_commerce/local_storge/shared_preferences/preferences.dart';
 import 'package:e_commerce/models/category.dart';
 import 'package:e_commerce/screens/product/product_screen.dart';
 import 'package:e_commerce/utils/size_config.dart';
@@ -62,7 +63,7 @@ class _SubCategoryScreenState extends State<SubCategoryScreen> {
                       return SubCategoryWidget(
                           subCategory: controller.subCategories[index],
                           onTap: () => Get.to(ProductScreen(
-                              id: controller.subCategories[index].id,name: myLocale.languageCode == 'ar'
+                              id: controller.subCategories[index].id,name: SharedPreferencesController().languageCode == 'ar'
                               ? controller.subCategories[index].nameAr
                               : controller.subCategories[index].nameEn,)));
                     },

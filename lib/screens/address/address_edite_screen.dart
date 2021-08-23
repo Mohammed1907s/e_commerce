@@ -3,6 +3,7 @@ import 'package:e_commerce/getx/address_getx_controller.dart';
 import 'package:e_commerce/local_storge/shared_preferences/preferences.dart';
 import 'package:e_commerce/models/address_details.dart';
 import 'package:e_commerce/utils/helper.dart';
+import 'package:e_commerce/utils/size_config.dart';
 import 'package:e_commerce/widgets/app_elevated_button.dart';
 import 'package:e_commerce/widgets/app_text.dart';
 import 'package:e_commerce/widgets/app_text_field.dart';
@@ -66,7 +67,8 @@ class _EditAddressScreenState extends State<EditAddressScreen> {
             AppTextField(
               controller: contactNumberEditingController,
               hintText: 'Phone Number',
-              prefix: AppText( '+970'),
+              prefix: AppText( '+970',color: Colors.black,
+                fontSize: SizeConfig.scaleTextFont(16),),
               keyboardType: TextInputType.phone,
             ),
             SizedBox(height: 20),

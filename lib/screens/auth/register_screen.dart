@@ -76,7 +76,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 height: SizeConfig.scaleHeight(30),
               ),
               AppText(
-                'Register',
+                'Register'.tr,
                 fontWeight: FontWeight.w600,
                 fontSize: SizeConfig.scaleTextFont(30),
                 textAlign: TextAlign.start,
@@ -85,7 +85,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 height: SizeConfig.scaleHeight(18),
               ),
               AppText(
-                'Create your new account',
+                'Create your new account'.tr,
                 fontSize: SizeConfig.scaleTextFont(14),
                 textAlign: TextAlign.start,
                 fontWeight: FontWeight.w300,
@@ -96,7 +96,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               AppTextField(
                 controller: _nameTextController,
-                hintText: 'Name',
+                hintText: 'Name'.tr,
                 suffixIcon: Icons.person,
               ),
               SizedBox(
@@ -104,7 +104,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               AppTextField(
                 controller: _mobileTextController,
-                hintText: 'Mobile',
+                hintText: 'Mobile'.tr,
                 suffixIcon: Icons.phone_android,
               ),
               SizedBox(
@@ -112,7 +112,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               AppTextField(
                 controller: _passwordTextController,
-                hintText: 'Password',
+                hintText: 'Password'.tr,
                 suffixIcon: Icons.lock_outlined,
               ),
               SizedBox(
@@ -160,7 +160,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               Row(
                 children: [
                   AppText(
-                    'Gender',
+                    'Gender'.tr,
                     color: Colors.grey.shade500,
                   ),
                   SizedBox(
@@ -178,7 +178,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     },
                   ),
                   //SizedBox(width: SizeConfig.scaleWidth(5),),
-                  AppText('Male'),
+                  AppText('Male'.tr),
                   SizedBox(
                     width: SizeConfig.scaleWidth(10),
                   ),
@@ -194,7 +194,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     },
                   ),
                   //SizedBox(width: SizeConfig.scaleWidth(5),),
-                  AppText('Female'),
+                  AppText('Female'.tr),
                 ],
               ),
               Container(
@@ -216,7 +216,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               SizedBox(height: SizeConfig.scaleHeight(18),),
               AppText(
-                'Already have an account?',
+                'Already have an account?'.tr,
                 fontSize: SizeConfig.scaleTextFont(14),
                 textAlign: TextAlign.start,
                 fontWeight: FontWeight.w400,
@@ -226,7 +226,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               TextButton(onPressed: (){
                 Navigator.pushNamed(context, '/login_screen');
               }, child: AppText(
-                'Sign in',
+                'Sign in'.tr,
                 fontSize: SizeConfig.scaleTextFont(16),
                 textAlign: TextAlign.start,
                 fontWeight: FontWeight.w500,
@@ -239,7 +239,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget getCityName() {
     if (city == null) {
       return AppText(
-         'Select City',
+         'Select City'.tr,
         color: Colors.grey,
       );
     } else {

@@ -1,4 +1,5 @@
 import 'package:e_commerce/getx/categories_getx_controller.dart';
+import 'package:e_commerce/local_storge/shared_preferences/preferences.dart';
 import 'package:e_commerce/screens/category/sub_category_screen.dart';
 import 'package:e_commerce/utils/size_config.dart';
 import 'package:e_commerce/widgets/app_text.dart';
@@ -22,7 +23,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
       appBar: AppBar(
         centerTitle: true,
         title: AppText(
-          'categories',
+          'categories'.tr,
           fontSize: SizeConfig.scaleTextFont(24),
           fontWeight: FontWeight.w600,
         ),
@@ -55,7 +56,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                             category: controller.categories[index],
                             onTap: () => Get.to(SubCategoryScreen(
                                 id: controller.categories[index].id,
-                                name: myLocale.languageCode == 'ar'
+                                name: SharedPreferencesController().languageCode == 'ar'
                                     ? controller.categories[index].nameAr
                                     : controller.categories[index].nameEn)));
                       },

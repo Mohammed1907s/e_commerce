@@ -67,7 +67,7 @@ class _VerifyMobileScreenState extends State<VerifyMobileScreen> {
                 height: SizeConfig.scaleHeight(57),
               ),
               AppText(
-                'Verify Mobile Number',
+                'Verify Mobile Number'.tr,
                 fontWeight: FontWeight.w600,
                 fontSize: SizeConfig.scaleTextFont(30),
                 textAlign: TextAlign.start,
@@ -76,7 +76,7 @@ class _VerifyMobileScreenState extends State<VerifyMobileScreen> {
                 height: SizeConfig.scaleHeight(18),
               ),
               AppText(
-                'Enter the OTP code sent to you',
+                'Enter the OTP code sent to you'.tr,
                 fontSize: SizeConfig.scaleTextFont(14),
                 textAlign: TextAlign.start,
                 fontWeight: FontWeight.w300,

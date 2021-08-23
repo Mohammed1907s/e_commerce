@@ -43,8 +43,21 @@ class ProductCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  //height: SizeConfig.scaleHeight(100),
-                child: Image.network(product.imageUrl,fit: BoxFit.cover,)),
+                  width: SizeConfig.scaleWidth(152),
+                  height: SizeConfig.scaleHeight(180),
+                  decoration: BoxDecoration(
+                    //borderRadius: BorderRadius.circular(15),
+                    color: Colors.white,
+                  ),
+                  child: Center(
+                    child: Image.network(
+                      product.imageUrl,
+
+                      fit: BoxFit.contain,
+                      // height: double.infinity,
+                    ),
+                  ),
+                ),
                 SizedBox(height: SizeConfig.scaleHeight(8),),
 
 

@@ -1,5 +1,6 @@
 import 'package:e_commerce/extenssions/app_colors_extenssion.dart';
 import 'package:e_commerce/getx/cart_getx_controller.dart';
+import 'package:e_commerce/getx/notification_getx_controller.dart';
 import 'package:e_commerce/getx/order_getx_controller.dart';
 import 'package:e_commerce/getx/product_getx_controller.dart';
 import 'package:e_commerce/getx/user_getx_controller.dart';
@@ -23,6 +24,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
   ProductGetxController controller = Get.put(ProductGetxController());
   CartGetxController cartGetxController = Get.put(CartGetxController());
   OrderGetxController orderGetxController = Get.put(OrderGetxController());
+  NotificationGetxController notificationGetxController = Get.put(NotificationGetxController());
 
 
   @override

@@ -3,6 +3,7 @@ import 'package:e_commerce/getx/categories_getx_controller.dart';
 import 'package:e_commerce/getx/home_getx_controller.dart';
 import 'package:e_commerce/getx/address_getx_controller.dart';
 import 'package:e_commerce/getx/product_getx_controller.dart';
+import 'package:e_commerce/local_storge/shared_preferences/preferences.dart';
 import 'package:e_commerce/screens/category/categories_screen.dart';
 import 'package:e_commerce/screens/category/sub_category_screen.dart';
 import 'package:e_commerce/screens/product/product_details_screen.dart';
@@ -69,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: SizeConfig.scaleWidth(10),
                 ),
                 AppText(
-                  'categories',
+                  'categories'.tr,
                   fontWeight: FontWeight.bold,
                   fontSize: SizeConfig.scaleTextFont(17),
                 ),
@@ -77,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 TextButton(
                     onPressed: () => Get.to(CategoriesScreen()),
                     child: AppText(
-                      'See more',
+                      'See all'.tr,
                       fontSize: SizeConfig.scaleTextFont(15),
                       fontWeight: FontWeight.w300,
                       color: Colors.blue,
@@ -99,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     category: home.homeModel!.data.categories[index],
                     onTap: () => Get.to(SubCategoryScreen(
                         id: home.homeModel!.data.categories[index].id,
-                        name: myLocale.languageCode == 'ar'
+                        name: SharedPreferencesController().languageCode == 'ar'
                             ? home
                             .homeModel!.data.categories[index].nameAr
                             : home.homeModel!.data.categories[index]
@@ -118,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: SizeConfig.scaleWidth(10),
                 ),
                 AppText(
-                  'Latest Products',
+                  'Latest Products'.tr,
                   fontWeight: FontWeight.bold,
                   fontSize: SizeConfig.scaleTextFont(17),
                 ),
@@ -136,7 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   childAspectRatio: 152 / 266,
                   crossAxisSpacing: SizeConfig.scaleWidth(4),
                   mainAxisSpacing: SizeConfig.scaleHeight(0.2)),
-              itemCount: home.homeModel!.data.latestProducts.length,
+              itemCount: 4,
               itemBuilder: (context, index) {
                 return ProductCard(
                   onTap: () {},
@@ -152,7 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: SizeConfig.scaleWidth(10),
                 ),
                 AppText(
-                  'Famous Products',
+                  'Famous Products'.tr,
                   fontWeight: FontWeight.bold,
                   fontSize: SizeConfig.scaleTextFont(17),
                 ),

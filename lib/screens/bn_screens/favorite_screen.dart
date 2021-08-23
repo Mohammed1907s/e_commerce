@@ -10,6 +10,7 @@ import 'package:e_commerce/widgets/app_elevated_button.dart';
 import 'package:e_commerce/widgets/app_text.dart';
 import 'package:e_commerce/widgets/product_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
@@ -52,12 +53,12 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
             ),
           ),
           SizedBox(height: SizeConfig.scaleHeight(16),),
-          AppText('nothing saved...',fontSize: SizeConfig.scaleTextFont(26),fontWeight: FontWeight.w500,),
-          AppText('... no worries. Start saving as you shop\n by clicking the little heart',fontSize: SizeConfig.scaleTextFont(16),fontWeight: FontWeight.w400,textAlign: TextAlign.center,),
+          AppText('Nothing saved...'.tr,fontSize: SizeConfig.scaleTextFont(26),fontWeight: FontWeight.w500,),
+          AppText('... no worries. Start saving as you shop\n by clicking the little heart'.tr.tr,fontSize: SizeConfig.scaleTextFont(16),fontWeight: FontWeight.w400,textAlign: TextAlign.center,),
           SizedBox(height: SizeConfig.scaleHeight(125),),
           Padding(
             padding:  EdgeInsets.symmetric(horizontal: SizeConfig.scaleWidth(30)),
-            child: AppElevatedButton(title: 'Start shopping', onPressed: () {
+            child: AppElevatedButton(title: 'Start shopping'.tr, onPressed: () {
               Navigator.pushReplacementNamed(context, '/main_screen');
             }, color: AppColors.app_button_color),
           )
@@ -81,7 +82,12 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
               productDetails: controller.products[index]),));
     },
       )
-      : Center(child: Text('no data'));
+      : Center(
+        child: SpinKitFadingCube(
+          color: Colors.yellow.shade700,
+          size: 50.0,
+        ),
+      );
     });
   }
 }

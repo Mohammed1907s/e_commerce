@@ -69,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: SizeConfig.scaleHeight(57),
             ),
             AppText(
-              'Sign in',
+              'Sign in'.tr,
               fontWeight: FontWeight.w600,
               fontSize: SizeConfig.scaleTextFont(30),
               textAlign: TextAlign.start,
@@ -78,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: SizeConfig.scaleHeight(18),
             ),
             AppText(
-              'Please sign in to continue app',
+              'Please sign in to continue app'.tr,
               fontSize: SizeConfig.scaleTextFont(14),
               textAlign: TextAlign.start,
               fontWeight: FontWeight.w300,
@@ -112,7 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         bottom: SizeConfig.scaleHeight(22),
                       ),
 
-                hintText: 'Mobile',
+                hintText: 'Mobile'.tr,
                 //counterText: '',
                 hintStyle: TextStyle(
                   color: Color(0xff9D9EA3),
@@ -173,7 +173,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         bottom: SizeConfig.scaleHeight(14),
                       ),
 
-                hintText: 'Password',
+                hintText: 'Password'.tr,
                 counterText: '',
                 hintStyle: TextStyle(
                   color: Color(0xff9D9EA3),
@@ -207,7 +207,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 TextButton(onPressed: (){
                   Navigator.pushNamed(context, '/forgot_screen');
                 }, child: AppText(
-                  'Forgot Password?',
+                  'Forgot Password?'.tr,
                   fontSize: SizeConfig.scaleTextFont(16),
                   textAlign: TextAlign.end,
                   fontWeight: FontWeight.w500,
@@ -234,7 +234,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             SizedBox(height: SizeConfig.scaleHeight(46),),
             AppText(
-              'Don’t have an account?',
+              'Don’t have an account?'.tr,
               fontSize: SizeConfig.scaleTextFont(14),
               textAlign: TextAlign.start,
               fontWeight: FontWeight.w400,
@@ -244,7 +244,7 @@ class _LoginScreenState extends State<LoginScreen> {
             TextButton(onPressed: (){
               Navigator.pushNamed(context, '/register_screen');
             }, child: AppText(
-              'Register',
+              'Register'.tr,
               fontSize: SizeConfig.scaleTextFont(16),
               textAlign: TextAlign.start,
               fontWeight: FontWeight.w500,
@@ -270,7 +270,7 @@ class _LoginScreenState extends State<LoginScreen> {
         _passwordTextController.text.isNotEmpty) {
       return true;
     }
-    Helper.showSnackBar(context, text: 'Enter Required Fields', error: true);
+    Helper.showSnackBar(context, text: 'Enter Required Fields'.tr, error: true);
     return false;
   }
 
@@ -288,7 +288,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (status) {
       Get.offAll(MainScreen());
     } else {
-      Helper.showSnackBar(context, text: 'Login failed, check your credentials!', error: true);
+      Helper.showSnackBar(context, text: 'Login failed, check your credentials!'.tr, error: true);
     }
   }
 }

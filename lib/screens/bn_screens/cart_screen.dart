@@ -59,7 +59,7 @@ class _CartScreenState extends State<CartScreen> {
                         ),
                       ),
                       AppElevatedButton(
-                        title: 'Make Order',
+                        title: 'Make Order'.tr,
                         color: AppColors.app_button_color,
                         onPressed: ()  {
                           Get.to(OrderScreen(cart: cart,));
@@ -85,7 +85,7 @@ class _CartScreenState extends State<CartScreen> {
                               height: SizeConfig.scaleHeight(16),
                             ),
                             AppText(
-                              'your cart is empty...',
+                              'your cart is empty....'.tr,
                               fontSize: SizeConfig.scaleTextFont(26),
                               fontWeight: FontWeight.w500,
                             ),
@@ -99,7 +99,7 @@ class _CartScreenState extends State<CartScreen> {
   deleteItem(
       {required CartItem cartItem, required BuildContext context}) async {
     bool status = await CartGetxController.to.deleteItem(cartItem.id);
-    String msg = status ? 'delete success' : 'delete fail';
+    String msg = status ? 'Deleted'.tr : 'Delete failed'.tr;
     Helper.showSnackBar(context, text: msg);
   }
 

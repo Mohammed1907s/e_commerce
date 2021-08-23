@@ -67,7 +67,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 height: SizeConfig.scaleHeight(57),
               ),
               AppText(
-                'Reset Password',
+                'Reset Password'.tr,
                 fontWeight: FontWeight.w600,
                 fontSize: SizeConfig.scaleTextFont(30),
                 textAlign: TextAlign.start,
@@ -76,7 +76,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 height: SizeConfig.scaleHeight(18),
               ),
               AppText(
-                'Enter 4 digit code verification, the code sent to your phone',
+                'Enter 4 digit code verification, the code sent to your phone'.tr,
                 fontSize: SizeConfig.scaleTextFont(14),
                 textAlign: TextAlign.start,
                 fontWeight: FontWeight.w300,
@@ -115,7 +115,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
               ),
               AppTextField(
                 controller: _newPasswordEditingController,
-                hintText: 'New Password',
+                hintText: 'New Password'.tr,
                 suffixIcon: Icons.lock_outlined,
               ),
 
@@ -124,7 +124,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
               ),
               AppTextField(
                 controller: _newPasswordConfirmationEditingController,
-                hintText: 'New Password Confirmation',
+                hintText: 'New Password Confirmation'.tr,
                 suffixIcon: Icons.lock_outlined,
               ),
               SizedBox(
@@ -166,9 +166,9 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
         return true;
       }
       Helper.showSnackBar(context,
-          text: 'Password is not confirmed correctly!', error: true);
+          text: 'Password is not confirmed correctly!'.tr, error: true);
     } else {
-      Helper.showSnackBar(context, text: 'Enter required data!', error: true);
+      Helper.showSnackBar(context, text: 'Enter required data!'.tr, error: true);
     }
     return false;
   }

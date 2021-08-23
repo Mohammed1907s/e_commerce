@@ -44,6 +44,15 @@ mixin ApiMixin {
     return {
       HttpHeaders.authorizationHeader: SharedPreferencesController().token,
       'X-Requested-With': 'XMLHttpRequest',
+      'Accept': 'application/json'
     };
   }
+  Map<String, String> get headerNotification {
+    return {
+      HttpHeaders.authorizationHeader: SharedPreferencesController().token,
+
+      'Accept': 'application/json'
+    };
+  }
+
 }

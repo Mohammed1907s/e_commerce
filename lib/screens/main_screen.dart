@@ -1,6 +1,8 @@
+import 'package:badges/badges.dart';
 import 'package:e_commerce/extenssions/app_colors_extenssion.dart';
 import 'package:e_commerce/firebase/fb_notifications.dart';
 import 'package:e_commerce/getx/home_getx_controller.dart';
+import 'package:e_commerce/getx/notification_getx_controller.dart';
 import 'package:e_commerce/getx/user_getx_controller.dart';
 import 'package:e_commerce/models/bn_screen.dart';
 import 'package:e_commerce/screens/bn_screens/cart_screen.dart';
@@ -8,6 +10,7 @@ import 'package:e_commerce/screens/bn_screens/favorite_screen.dart';
 import 'package:e_commerce/screens/bn_screens/home_screen.dart';
 import 'package:e_commerce/screens/bn_screens/profile_screen.dart';
 import 'package:e_commerce/screens/bn_screens/show_all_order_screen.dart';
+import 'package:e_commerce/screens/notification_screen.dart';
 import 'package:e_commerce/utils/size_config.dart';
 import 'package:e_commerce/widgets/app_text.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -21,6 +24,8 @@ class MainScreen extends StatefulWidget {
 
 
 
+
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -31,9 +36,9 @@ class _MainScreenState extends State<MainScreen> with FbNotifications {
 
   List<BottomNavigationScreen> _screens = <BottomNavigationScreen>[
     BottomNavigationScreen(title: ('ulmo'), widget: HomeScreen()),
-    BottomNavigationScreen(title: ('Cart'), widget: CartScreen()),
-    BottomNavigationScreen(title: ('FAVORITE'), widget: FavoriteScreen()),
-    BottomNavigationScreen(title: ('profile'), widget: ProfileScreen()),
+    BottomNavigationScreen(title: ('Cart'.tr), widget: CartScreen()),
+    BottomNavigationScreen(title: ('FAVORITE'.tr), widget: FavoriteScreen()),
+    BottomNavigationScreen(title: ('profile'.tr), widget: ProfileScreen()),
   ];
   @override
   void initState() {
@@ -72,9 +77,13 @@ class _MainScreenState extends State<MainScreen> with FbNotifications {
         actions: [
           Visibility(
             visible: _currentIndex == 0,
-            child: IconButton(
-              onPressed: () => Get.to(AllOrdersScreen()),
-              icon: Icon(Icons.bookmark_border,color: AppColors.app_scaffold,),
+            child: Badge(
+              position: BadgePosition.topEnd(top: 8,end: 2),
+              badgeContent: Text('${NotificationGetxController.to.notification.length.toString()}',style: TextStyle(color: Colors.white),),
+              child: IconButton(
+                onPressed: () => Get.to(()=>NotificationScreen()),
+                icon: Icon(Icons.notification_important_outlined,color: AppColors.app_scaffold,),
+              ),
             ),
           ),],
 

@@ -13,6 +13,8 @@ class ApiSettings {
   static const String UPDATE_PROFILE = _BASE_URL + "auth/update-profile";
   static const String HOME = _BASE_URL + "home";
   static const String REFRESHFCMTOKEN = _BASE_URL + "/auth/refresh-fcm-token";
+  static const String NOTIFICATION = _BASE_URL + "notifications";
+
 
   //Cities Request
   static const String CITIES = _BASE_URL + "cities";

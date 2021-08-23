@@ -1,6 +1,7 @@
 import 'package:e_commerce/extenssions/app_colors_extenssion.dart';
 import 'package:e_commerce/getx/cart_getx_controller.dart';
 import 'package:e_commerce/getx/product_getx_controller.dart';
+import 'package:e_commerce/local_storge/shared_preferences/preferences.dart';
 import 'package:e_commerce/models/cart_item.dart';
 import 'package:e_commerce/models/product_details.dart';
 import 'package:e_commerce/utils/size_config.dart';
@@ -56,7 +57,7 @@ class _ProductCartWidgetState extends State<ProductCartWidget> {
                       IconButton(onPressed: widget.onTap, icon: Icon(Icons.highlight_off_outlined,color: Color(0xff9E9E9E),))
                     ],
                   ),
-                  AppText(widget.cartItem.nameEn,fontSize: SizeConfig.scaleTextFont(15),fontWeight: FontWeight.w400,color: Color(0xff9E9E9E),),
+                  AppText( SharedPreferencesController().languageCode == 'ar' ? widget.cartItem.nameAr: widget.cartItem.nameEn,fontSize: SizeConfig.scaleTextFont(15),fontWeight: FontWeight.w400,color: Color(0xff9E9E9E),),
 
 
                 ],

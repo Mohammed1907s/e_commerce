@@ -8,6 +8,7 @@ import 'package:e_commerce/locale/app_locale.dart';
 import 'package:e_commerce/screens/address/address_screen.dart';
 import 'package:e_commerce/screens/auth/change_password_screen.dart';
 import 'package:e_commerce/screens/auth/login_screen.dart';
+import 'package:e_commerce/screens/bn_screens/show_all_order_screen.dart';
 import 'package:e_commerce/screens/contact/contact_us_screen.dart';
 import 'package:e_commerce/screens/credit_card/display_cards_screen.dart';
 import 'package:e_commerce/utils/size_config.dart';
@@ -72,39 +73,45 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
 
               ProfileWidget(
-                label: 'contact us',
+                label: 'contact us'.tr,
                 leading: Icon(Icons.info),
                 trailingIcon: Icons.arrow_forward_ios,
                 onTap: ()=> Get.to(ContactUsScreen()),
               ),
               ProfileWidget(
-                label: 'My Cards',
+                label: 'My Cards'.tr,
                 leading: Icon(Icons.credit_card_outlined),
                 trailingIcon: Icons.arrow_forward_ios,
                 onTap: () => Get.to(DisplayCardScreen()),
               ),
 
               ProfileWidget(
-                label: 'My Address',
+                label: 'My Address'.tr,
                 leading: Icon(Icons.location_on),
                 trailingIcon: Icons.arrow_forward_ios,
                 onTap: () => Get.to(AddressScreen()),
               ),
+              ProfileWidget(
+                label: 'My Orders'.tr,
+                leading: Icon(Icons.shopping_bag),
+                trailingIcon: Icons.arrow_forward_ios,
+                onTap: () => Get.to(AllOrdersScreen()),
+              ),
 
               ProfileWidget(
-                label: 'language',
+                label: 'language'.tr,
                 leading: Icon(Icons.language_outlined),
                 trailingIcon: Icons.arrow_forward_ios,
                 onTap: () => AppLocale.changeLang(),
               ),
               ProfileWidget(
-                label: 'change password',
+                label: 'change password'.tr,
                 leading: Icon(Icons.refresh),
                 onTap: ()=> Get.to(ChangePasswordScreen()),
               ),
 
               ProfileWidget(
-                  label: 'logout',
+                  label: 'logout'.tr,
                   leading: Icon(Icons.logout),
                   onTap: (){showCartDialog();}
               ),
@@ -134,13 +141,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       SizedBox(height: SizeConfig.scaleHeight(16),),
-                      AppText('are you sure you want \n to sign out?',fontSize: SizeConfig.scaleTextFont(24),fontWeight: FontWeight.w600,textAlign: TextAlign.center,),
+                      AppText('are you sure you want \n to sign out?'.tr,fontSize: SizeConfig.scaleTextFont(24),fontWeight: FontWeight.w600,textAlign: TextAlign.center,),
                       SizedBox(height: SizeConfig.scaleHeight(8),),
-                      AppText('We definitely don\'t want that',fontSize: SizeConfig.scaleTextFont(16),fontWeight: FontWeight.w400,textAlign: TextAlign.center,color: Color(0xff9E9E9E),),
+                      AppText('We definitely don\'t want that'.tr,fontSize: SizeConfig.scaleTextFont(16),fontWeight: FontWeight.w400,textAlign: TextAlign.center,color: Color(0xff9E9E9E),),
                       SizedBox(height: SizeConfig.scaleHeight(24),),
-                      AppElevatedButton(title: 'No, I want to stay', onPressed: (){Get.back();}, color: AppColors.app_button_color),
+                      AppElevatedButton(title: 'No, I want to stay'.tr, onPressed: (){Get.back();}, color: AppColors.app_button_color),
                       SizedBox(height: SizeConfig.scaleHeight(8),),
-                      AppElevatedButton(title: 'Yep, sign out', onPressed: () async {
+                      AppElevatedButton(title: 'Yep, sign out'.tr, onPressed: () async {
                         bool logout = await UsersGetxController.to.logout(context);
                         if (logout) {
                           Get.offAll(LoginScreen());

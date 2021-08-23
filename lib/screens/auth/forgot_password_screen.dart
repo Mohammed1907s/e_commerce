@@ -61,7 +61,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 height: SizeConfig.scaleHeight(57),
               ),
               AppText(
-                'Forgot Password',
+                'Forgot Password'.tr,
                 fontWeight: FontWeight.w600,
                 fontSize: SizeConfig.scaleTextFont(30),
                 textAlign: TextAlign.start,
@@ -70,7 +70,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 height: SizeConfig.scaleHeight(18),
               ),
               AppText(
-                'Enter your mobile number',
+                'Enter your mobile number'.tr,
                 fontSize: SizeConfig.scaleTextFont(14),
                 textAlign: TextAlign.start,
                 fontWeight: FontWeight.w300,
@@ -81,7 +81,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               ),
               AppTextField(
                 controller: _mobileTextController,
-                hintText: 'Mobile',
+                hintText: 'Mobile'.tr,
                 suffixIcon: Icons.phone_android_outlined,
               ),
               SizedBox(
@@ -123,7 +123,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
     if (_mobileTextController.text.isNotEmpty) {
       return true;
     }
-    Helper.showSnackBar(context, text: 'Enter required data!', error: true);
+    Helper.showSnackBar(context, text: 'Enter required data!'.tr, error: true);
     return false;
   }
 
@@ -134,7 +134,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
     } else {
       Helper.showSnackBar(
           context,
-          text: 'Login failed, check your credentials!',
+          text: 'Login failed, check your credentials!'.tr,
           error: true);
     }
 

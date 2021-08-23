@@ -19,6 +19,7 @@ class CartDbController extends DbOperations<CartItem> {
   Future<bool> delete(int id) async{
     int countOfDeletedRows = await _database.delete('cart', where: 'id = ?', whereArgs: [id]);
     return countOfDeletedRows != 0;
+
   }
 
   @override

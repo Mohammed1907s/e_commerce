@@ -1,9 +1,12 @@
 import 'package:e_commerce/extenssions/app_colors_extenssion.dart';
+import 'package:e_commerce/local_storge/shared_preferences/preferences.dart';
 import 'package:e_commerce/utils/size_config.dart';
 import 'package:e_commerce/widgets/app_elevated_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:e_commerce/locale/app_locale.dart';
+
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
@@ -24,7 +27,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           children: [
             Image.asset('images/ulmo-logos_black.png'),
             SizedBox(height: SizeConfig.scaleHeight(10),),
-            Text('Get quality and classy products at very affordable prices',
+            Text( 'Get quality and classy products at very affordable prices',
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontStyle: FontStyle.italic,

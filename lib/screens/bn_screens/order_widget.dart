@@ -42,12 +42,12 @@ class OrderWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 AppText(
-                  'Order ID ${order.id}',
+                  'Order ID ${order.id}'.tr,
                   fontWeight: FontWeight.w500,
                   fontSize: 13,
                 ),
                 AppText(
-                  'Total Price: ${order.total}',
+                  'Total Price: ${order.total}'.tr,
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
                   color:Colors.black,

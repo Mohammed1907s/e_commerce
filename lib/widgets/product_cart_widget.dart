@@ -38,6 +38,7 @@ class _ProductCartWidgetState extends State<ProductCartWidget> {
               width: SizeConfig.scaleWidth(100),
               child: Image.network(widget.cartItem.imageUrl,
                 fit: BoxFit.contain,
+
                 //height: double.infinity,),
             ),),
             title: Container(

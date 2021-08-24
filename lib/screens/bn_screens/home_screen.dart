@@ -34,8 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Locale myLocale = Localizations.localeOf(context);
     return Scaffold(
         // /backgroundColor: Colors.white,
-        extendBodyBehindAppBar: false,
-        body: SingleChildScrollView(
+      body: SingleChildScrollView(
          
           child: GetBuilder<HomeGetxController>(
             builder: (HomeGetxController home) {
@@ -49,9 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
               }
               return Column(mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                  SizedBox(
-              height: SizeConfig.scaleHeight(100),
-                  ),
+
                   Container(
                 child: CarouselSlider(
               options: CarouselOptions(
@@ -126,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               ],
                   ),
-                  GridView.builder(
+                  GridView(
                     padding: EdgeInsets.zero,
                     physics:  NeverScrollableScrollPhysics(),
 
@@ -137,14 +134,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   childAspectRatio: 152 / 266,
                   crossAxisSpacing: SizeConfig.scaleWidth(4),
                   mainAxisSpacing: SizeConfig.scaleHeight(0.2)),
-              itemCount: 4,
-              itemBuilder: (context, index) {
-                return ProductCard(
-                  onTap: () {},
-                  product: home.homeModel!.data.latestProducts[index],
-                );
-                // onTap: () => Get.to(ProductScreen(id: controller.products[index].id)));
-              },
+              children: [
+              ProductCard(
+              onTap: () {},
+              product: home.homeModel!.data.latestProducts[6],),
+              ProductCard(
+              onTap: () {},
+              product: home.homeModel!.data.latestProducts[7],),
+              ProductCard(
+              onTap: () {},
+              product: home.homeModel!.data.latestProducts[5],),
+              ProductCard(
+              onTap: () {},
+              product: home.homeModel!.data.latestProducts[8],),
+              ],
                   ),
                   Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -160,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               ],
                   ),
-                    GridView.builder(
+                    GridView(
                       padding: EdgeInsets.zero,
                       physics:  NeverScrollableScrollPhysics(),
 
@@ -171,14 +174,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           childAspectRatio: 152 / 266,
                           crossAxisSpacing: SizeConfig.scaleWidth(4),
                           mainAxisSpacing: SizeConfig.scaleHeight(0.2)),
-                      itemCount: 2,
-                      itemBuilder: (context, index) {
-                        return ProductCard(
-                          onTap: ()  {},
-                          product: home.homeModel!.data.famousProducts[index],
-                        );
-                        // onTap: () => Get.to(ProductScreen(id: controller.products[index].id)));
-                      },
+                      children: [
+              ProductCard(
+              onTap: ()  {},
+              product: home.homeModel!.data.famousProducts[8],
+              ),
+              ProductCard(
+              onTap: ()  {},
+              product: home.homeModel!.data.famousProducts[9],
+              ),
+                      ],
                     ),
                 ]);
             },

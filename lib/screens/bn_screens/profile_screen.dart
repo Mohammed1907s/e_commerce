@@ -42,7 +42,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 100,),
+
               Row(children: [
                 SizedBox(
                   width: SizeConfig.scaleWidth(10),

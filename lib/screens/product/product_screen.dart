@@ -3,6 +3,7 @@ import 'package:e_commerce/getx/product_getx_controller.dart';
 import 'package:e_commerce/screens/product/product_details_screen.dart';
 import 'package:e_commerce/utils/size_config.dart';
 import 'package:e_commerce/widgets/app_text.dart';
+import 'package:e_commerce/widgets/product_card.dart';
 import 'package:e_commerce/widgets/product_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -63,7 +64,7 @@ class _ProductScreenState extends State<ProductScreen> {
                       mainAxisSpacing: SizeConfig.scaleHeight(16)),
                   itemCount: controller.products.length,
                   itemBuilder: (context, index) {
-                    return ProductWidget(
+                    return ProductCard(
                         product: controller.products[index],
                         onTap: () => Get.to(ProductDetailsScreen(
                             productDetails: controller.products[index]),));

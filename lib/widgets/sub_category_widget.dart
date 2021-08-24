@@ -24,6 +24,13 @@ class SubCategoryWidget extends StatelessWidget {
             decoration: BoxDecoration(
               color:Color(0xFFF5F5F5) ,
               borderRadius: BorderRadius.circular(18),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.shade100,
+                  spreadRadius: 0,
+                  blurRadius: 8
+                )
+              ]
             ),
 
             child: ClipRRect(

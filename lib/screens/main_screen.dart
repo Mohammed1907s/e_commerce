@@ -60,7 +60,7 @@ class _MainScreenState extends State<MainScreen> with FbNotifications {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      extendBodyBehindAppBar: true,
+      //extendBodyBehindAppBar: true,
       appBar: AppBar(
         centerTitle: true,
 
